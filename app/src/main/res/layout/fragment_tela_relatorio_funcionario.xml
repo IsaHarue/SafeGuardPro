@@ -40,9 +40,9 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Suas EPIs"
+                android:text="Relatorio dos Funcionarios"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="33sp"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -80,9 +80,9 @@
                         android:id="@+id/tvItemEPI1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="EPIs"
+                        android:text="Funcionarios"
                         android:textColor="@color/white"
-                        android:textSize="40sp"
+                        android:textSize="30sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/vItensEPI4"
                         app:layout_constraintEnd_toEndOf="@+id/vItensEPI4"
@@ -121,9 +121,9 @@
                         android:id="@+id/tvItemEPI2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="EPIs"
+                        android:text="Funcionario"
                         android:textColor="@color/white"
-                        android:textSize="40sp"
+                        android:textSize="30sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/vItensEPI4"
                         app:layout_constraintEnd_toEndOf="@+id/vItensEPI4"
@@ -162,9 +162,9 @@
                         android:id="@+id/tvItemEPI3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="EPIs"
+                        android:text="Funcionario"
                         android:textColor="@color/white"
-                        android:textSize="40sp"
+                        android:textSize="30sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/vItensEPI3"
                         app:layout_constraintEnd_toEndOf="@+id/vItensEPI3"
@@ -205,9 +205,9 @@
                         android:id="@+id/tvItemEPI4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="EPIs"
+                        android:text="Funcionario"
                         android:textColor="@color/white"
-                        android:textSize="40sp"
+                        android:textSize="30sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/vItensEPI4"
                         app:layout_constraintEnd_toEndOf="@+id/vItensEPI4"
@@ -248,9 +248,9 @@
                         android:id="@+id/tvItemEPI5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="EPIs"
+                        android:text="Funcionario"
                         android:textColor="@color/white"
-                        android:textSize="40sp"
+                        android:textSize="30sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/vItensEPI5"
                         app:layout_constraintEnd_toEndOf="@+id/vItensEPI5"
@@ -261,232 +261,16 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card6"
-                android:layout_width="305dp"
-                android:layout_height="105dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/roxo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card5">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/image6"
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_marginStart="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI"
-                        app:layout_constraintStart_toStartOf="@+id/vItensEPI"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI"
-                        app:layout_constraintVertical_bias="0.513"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/tvItemEPI6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EPIs"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI6"
-                        app:layout_constraintEnd_toEndOf="@+id/vItensEPI6"
-                        app:layout_constraintStart_toEndOf="@+id/image6"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI6" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card7"
-                android:layout_width="305dp"
-                android:layout_height="105dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/roxo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card6">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/image7"
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_marginStart="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI"
-                        app:layout_constraintStart_toStartOf="@+id/vItensEPI"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI"
-                        app:layout_constraintVertical_bias="0.513"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/tvItemEPI7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EPIs"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI7"
-                        app:layout_constraintEnd_toEndOf="@+id/vItensEPI7"
-                        app:layout_constraintStart_toEndOf="@+id/image7"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI7" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card8"
-                android:layout_width="305dp"
-                android:layout_height="105dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/roxo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card7">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/image8"
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_marginStart="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI"
-                        app:layout_constraintStart_toStartOf="@+id/vItensEPI"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI"
-                        app:layout_constraintVertical_bias="0.513"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/tvItemEPI8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EPIs"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI8"
-                        app:layout_constraintEnd_toEndOf="@+id/vItensEPI8"
-                        app:layout_constraintStart_toEndOf="@+id/image8"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI8" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card9"
-                android:layout_width="305dp"
-                android:layout_height="105dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/roxo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card8">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/image9"
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_marginStart="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI"
-                        app:layout_constraintStart_toStartOf="@+id/vItensEPI"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI"
-                        app:layout_constraintVertical_bias="0.513"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/tvItemEPI9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EPIs"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI9"
-                        app:layout_constraintEnd_toEndOf="@+id/vItensEPI9"
-                        app:layout_constraintStart_toEndOf="@+id/image9"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI9" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card10"
-                android:layout_width="305dp"
-                android:layout_height="105dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/roxo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card5">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/image10"
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_marginStart="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI"
-                        app:layout_constraintStart_toStartOf="@+id/vItensEPI"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI"
-                        app:layout_constraintVertical_bias="0.513"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/tvItemEPI10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EPIs"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI10"
-                        app:layout_constraintEnd_toEndOf="@+id/vItensEPI10"
-                        app:layout_constraintStart_toEndOf="@+id/image10"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI10" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icone_conta_borda"
-        tools:layout_editor_absoluteX="336dp"
+        android:src="@drawable/icone_conta_borda"
+        tools:layout_editor_absoluteX="328dp"
         tools:layout_editor_absoluteY="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

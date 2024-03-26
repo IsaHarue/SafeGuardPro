@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza"
+    tools:context=".view.TelaCadastro"
+    tools:ignore="MissingConstraints">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="87dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/logo_sem_fundo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+    <TextView
+        android:id="@+id/tvcadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:text="Cadastro de EPI"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <EditText
+        android:id="@+id/edtnome"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@color/cinzaC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <TextView
+        android:id="@+id/tvnome"
+        android:layout_width="62dp"
+        android:layout_height="28dp"
+        android:text="Nome:"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtnome"
+        tools:layout_editor_absoluteX="73dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/edtId"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:background="@color/cinzaC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvId" />
+
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="ID do EPI:"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtnome"
+        tools:layout_editor_absoluteX="73dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <EditText
+        android:id="@+id/edtfuncionalidade"
+        android:layout_width="255dp"
+        android:layout_height="100dp"
+        android:background="@color/cinzaC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvfuncionalide" />
+
+    <TextView
+        android:id="@+id/tvfuncionalide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Funcionalidade:"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtId"
+        tools:layout_editor_absoluteX="73dp"
+        android:layout_marginTop="10dp"
+         />
+
+    <EditText
+        android:id="@+id/edtmodouso"
+        android:layout_width="255dp"
+        android:layout_height="100dp"
+        android:background="@color/cinzaC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvmodouso" />
+
+    <TextView
+        android:id="@+id/tvmodouso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modo de Uso:"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtfuncionalidade"
+        tools:layout_editor_absoluteX="73dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/azul2"
+        android:text="Cadastrar"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtmodouso"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icone_conta_borda"
+        tools:layout_editor_absoluteX="328dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

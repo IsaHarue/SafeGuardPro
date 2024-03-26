@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza"
+    tools:context=".view.TelaCadastro"
+    tools:ignore="MissingConstraints">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="87dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/logo_sem_fundo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrega"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="155dp" />
+
+    <Button
+        android:id="@+id/botaoMais"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/azul2"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="155dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEntrega1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cinzaC2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoMais"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvnomeFuncionario1"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="Nome do Funcionario"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                />
+
+            <TextView
+                android:id="@+id/tvEpi1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Nome EPI"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvIdEpi1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="ID do EPI"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvValidade1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Data de Validade"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEntrega2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cinzaC3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardEntrega1"
+        >
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvnomeFuncionario2"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="Fulaninho Junior da Siva"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                />
+
+            <TextView
+                android:id="@+id/tvEpi2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Capacete de Obra"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tvIdEpi2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text=" 962590"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tvValidade2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="30/09/2026"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icone_conta_borda"
+        tools:layout_editor_absoluteX="328dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
