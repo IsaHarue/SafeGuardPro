@@ -3,5 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="cinza">#DD000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="t">#220849</color>
+    <color name="azul">#220849</color>
+    <color name="azul2">#011CB5</color>
+    <color name="cinzaC">#29292E</color>
+    <color name="azul3">#0000FF</color>
+    <color name="roxo">#3E007C</color>
+    <color name="roxo2">#8000FF</color>
+    <color name="cinzaC2">#535360</color>
+    <color name="cinzaC3">#87879F</color>
 </resources>
