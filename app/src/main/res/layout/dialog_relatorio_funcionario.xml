@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/cinza"
 
-    tools:ignore="MissingConstraints">
+    tools:ignore="MissingClass,MissingConstraints">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
