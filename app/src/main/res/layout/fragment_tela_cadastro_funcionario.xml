@@ -47,7 +47,8 @@
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
-        app:layout_constraintStart_toStartOf="@+id/tvnome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvnome" />
 
     <EditText
@@ -71,7 +72,7 @@
         android:text="Nome:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@+id/tvcadastro"
+        app:layout_constraintStart_toStartOf="@+id/edtnome"
         app:layout_constraintTop_toBottomOf="@+id/tvcadastro" />
 
     <TextView
@@ -81,19 +82,20 @@
         android:text="E-mail:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="277dp" />
+        app:layout_constraintStart_toStartOf="@+id/edtnome"
+        app:layout_constraintTop_toBottomOf="@+id/edtnome"
+        android:layout_marginTop="25dp"
+        />
 
     <EditText
         android:id="@+id/edtIdade"
         android:layout_width="255dp"
         android:layout_height="46dp"
         android:background="@color/cinzaC"
-        app:layout_constraintBottom_toTopOf="@+id/edtCpf"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtemail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvIdade" />
 
     <TextView
         android:id="@+id/tvIdade"
@@ -115,17 +117,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="517dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCpf" />
 
     <TextView
         android:id="@+id/tvCpf"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:text="CPF do Funicionario:"
+        android:layout_marginTop="25dp"
         android:textColor="@color/white"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="489dp" />
+        app:layout_constraintStart_toStartOf="@id/edtIdade"
+        app:layout_constraintTop_toBottomOf="@id/edtIdade"
+        />
 
     <Button
         android:id="@+id/button3"
@@ -134,11 +138,12 @@
         android:backgroundTint="@color/azul2"
         android:text="Cadastrar"
         android:textColor="@color/white"
+        android:layout_margin="25dp"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="604dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtCpf"
         />
 
     <ImageView
@@ -146,7 +151,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icone_conta_borda"
-        tools:layout_editor_absoluteX="328dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

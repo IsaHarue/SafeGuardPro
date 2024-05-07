@@ -7,38 +7,25 @@
     android:background="@color/cinza"
     >
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:background="@color/black"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-         />
 
     <TextView
         android:id="@+id/tvutilisar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nome EPI"
+        android:text="Fulaninho da Silva"
         android:textColor="@color/roxo2"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="410dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvutilisar"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -68,49 +55,44 @@
                         android:id="@+id/texto1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
                         android:layout_marginTop="20dp"
-                        android:layout_marginEnd="50dp"
                         android:text="ID : 35646443754775"
                         android:textColor="@color/white"
-                        android:textSize="32sp"
+                        android:textSize="26sp"
+                        android:textAlignment="center"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvtexto2"
-                        android:layout_width="313dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="50dp"
+                        android:layout_marginTop="20dp"
                         android:text="Validade: 02/08/2026"
                         android:textColor="@color/white"
-                        android:textSize="32sp"
+                        android:textSize="26sp"
+                        android:textAlignment="center"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvtexto3"
-                        android:layout_width="313dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="50dp"
+                        android:layout_marginTop="20dp"
                         android:text="Funcionario: "
                         android:textColor="@color/white"
-                        android:textSize="32sp"
+                        android:textSize="26sp"
+                        android:textAlignment="center"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvtexto4"
-                        android:layout_width="313dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="50dp"
-                        android:layout_marginBottom="200dp"
+                        android:layout_marginTop="20dp"
                         android:text="Estado:"
                         android:textColor="@color/white"
-                        android:textSize="32sp"
+                        android:textSize="26sp"
+                        android:textAlignment="center"
                         android:textStyle="bold" />
 
                 </LinearLayout>
