@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/cinza"
     tools:context=".view.TelaCadastro"
-    tools:ignore="MissingConstraints">
+    >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -15,16 +15,19 @@
         android:background="@color/black"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="87dp"
         android:layout_height="79dp"
         app:srcCompat="@drawable/logo_sem_fundo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
     <TextView
@@ -36,29 +39,25 @@
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginTop="10dp"/>
 
     <EditText
         android:id="@+id/edtnome"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="205dp" />
+        app:layout_constraintStart_toStartOf="@+id/tvnome"
+        app:layout_constraintTop_toBottomOf="@+id/tvnome" />
 
     <EditText
         android:id="@+id/edtCpf"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="305dp" />
+        app:layout_constraintStart_toStartOf="@+id/tvCpf"
+        app:layout_constraintTop_toBottomOf="@+id/tvCpf" />
 
     <TextView
         android:id="@+id/tvnome"
@@ -67,18 +66,20 @@
         android:text="Nome:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="177dp" />
+        app:layout_constraintEnd_toStartOf="@id/tvcadastro"
+        app:layout_constraintTop_toBottomOf="@+id/tvcadastro"
+        android:layout_marginTop="30dp"/>
 
     <TextView
         android:id="@+id/tvCpf"
         android:layout_width="62dp"
         android:layout_height="28dp"
+        android:layout_marginTop="30dp"
         android:text="CPF:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="277dp" />
+        app:layout_constraintStart_toStartOf="@+id/edtnome"
+        app:layout_constraintTop_toBottomOf="@+id/edtnome" />
 
     <EditText
         android:id="@+id/edtsenha"
@@ -87,10 +88,8 @@
         android:background="@color/cinzaC"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="406dp" />
+        app:layout_constraintStart_toStartOf="@+id/tvsenha"
+        app:layout_constraintTop_toBottomOf="@+id/tvsenha" />
 
     <TextView
         android:id="@+id/tvsenha"
@@ -99,8 +98,9 @@
         android:text="Senha:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="378dp" />
+        app:layout_constraintStart_toStartOf="@+id/edtCpf"
+        app:layout_constraintTop_toBottomOf="@+id/edtCpf"
+        android:layout_marginTop="30dp"/>
 
     <EditText
         android:id="@+id/edtsenhaC"
@@ -109,20 +109,19 @@
         android:background="@color/cinzaC"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="517dp" />
+        app:layout_constraintStart_toStartOf="@+id/tvsenhaC"
+        app:layout_constraintTop_toBottomOf="@+id/tvsenhaC" />
 
     <TextView
         android:id="@+id/tvsenhaC"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
+        android:layout_marginTop="30dp"
         android:text="Confirme a Senha:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="489dp" />
+        app:layout_constraintStart_toStartOf="@+id/edtsenha"
+        app:layout_constraintTop_toBottomOf="@+id/edtsenha" />
 
     <Button
         android:id="@+id/button3"
@@ -135,8 +134,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="604dp"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/edtsenhaC"
+        android:layout_marginTop="50dp"/>
 
     <TextView
         android:id="@+id/tvfazerlogin"
@@ -145,8 +144,8 @@
         android:text="Fazer Login"
         android:textColor="@color/azul3"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="664dp" />
+        app:layout_constraintEnd_toEndOf="@id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3"/>
 
     <TextView
         android:id="@+id/tvfrase2"
@@ -154,8 +153,10 @@
         android:layout_height="wrap_content"
         android:text="Já tem uma conta ?"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="664dp" />
+        app:layout_constraintStart_toStartOf="@id/button3"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+
+         />
 
 
 

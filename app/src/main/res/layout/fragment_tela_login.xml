@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/cinza"
     tools:context=".view.TelaLogin"
-    tools:ignore="MissingConstraints">
+    >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -15,101 +15,114 @@
         android:background="@color/black"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="87dp"
         android:layout_height="79dp"
-        app:srcCompat="@drawable/logo_sem_fundo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_sem_fundo" />
 
 
     <TextView
         android:id="@+id/tvlogin"
         android:layout_width="94dp"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:text="Login"
         android:textColor="@color/white"
         android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="124dp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/tvcpf"
-        android:layout_width="62dp"
-        android:layout_height="28dp"
-        android:text="CPF:"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="250dp" />
-
-    <EditText
-        android:id="@+id/edtcpf"
-        android:layout_width="255dp"
-        android:layout_height="45dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="278dp"
-        android:background="@color/cinzaC"/>
-
-    <TextView
-        android:id="@+id/tvsenha"
-        android:layout_width="62dp"
-        android:layout_height="28dp"
-        android:text="Senha:"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="361dp" />
-
-    <EditText
-        android:id="@+id/edtsenha"
-        android:layout_width="255dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:background="@color/cinzaC"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="389dp"/>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="255dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/azul2"
-        android:text="Logar"
-        android:textSize="17sp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="469dp"
-        />
-
-    <TextView
-        android:id="@+id/tvfrase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ainda não tem uma conta ?"
-        android:textColor="@color/white"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="556dp" />
-
-    <TextView
-        android:id="@+id/tvcriarconta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Criar conta"
         android:textStyle="bold"
-        android:textColor="@color/azul3"
-        tools:layout_editor_absoluteX="264dp"
-        tools:layout_editor_absoluteY="556dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvlogin"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/tvcpf"
+            android:layout_width="62dp"
+            android:layout_height="28dp"
+            android:text="CPF:"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtcpf"
+            android:layout_width="255dp"
+            android:layout_height="45dp"
+            android:background="@color/cinzaC"
+            app:layout_constraintStart_toStartOf="@id/tvcpf"
+            app:layout_constraintTop_toBottomOf="@+id/tvcpf" />
+
+        <TextView
+            android:id="@+id/tvsenha"
+            android:layout_width="62dp"
+            android:layout_height="28dp"
+            android:text="Senha:"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/edtcpf"
+            app:layout_constraintTop_toBottomOf="@+id/edtcpf"
+            android:layout_marginTop="50dp"/>
+
+        <EditText
+            android:id="@+id/edtsenha"
+            android:layout_width="255dp"
+            android:layout_height="46dp"
+            android:background="@color/cinzaC"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="@+id/tvsenha"
+            app:layout_constraintTop_toBottomOf="@+id/tvsenha" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="255dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/azul2"
+            android:text="Logar"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtsenha" />
+
+        <TextView
+            android:id="@+id/tvfrase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ainda não tem uma conta ?"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/button3"
+            app:layout_constraintStart_toStartOf="@id/button3"/>
+
+        <TextView
+            android:id="@+id/tvcriarconta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Criar conta"
+            android:textColor="@color/azul3"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvfrase"
+            app:layout_constraintTop_toBottomOf="@id/button3"
+            android:layout_marginStart="15dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
