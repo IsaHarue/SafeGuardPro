@@ -36,7 +36,6 @@
         android:text="Login"
         android:textColor="@color/white"
         android:textSize="35sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
@@ -90,7 +89,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvsenha" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnLogar"
             android:layout_width="255dp"
             android:layout_height="48dp"
             android:layout_marginTop="100dp"

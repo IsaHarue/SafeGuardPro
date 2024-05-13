@@ -4,54 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/telaLogin">
-
-    <activity
+    <fragment
+        android:id="@+id/telaInicial"
+        android:name="com.hpe.safeguardpro.view.TelaInicial"
+        android:label="fragment_tela_inicial"
+        tools:layout="@layout/fragment_tela_inicial" />
+    <fragment
         android:id="@+id/telaLogin"
         android:name="com.hpe.safeguardpro.view.TelaLogin"
         android:label="fragment_tela_login"
         tools:layout="@layout/fragment_tela_login" />
     <fragment
-        android:id="@+id/telaInicial"
-        android:name="com.hpe.safeguardpro.view.TelaInicial"
-        android:label="fragment_tela_inicial"
-        tools:layout="@layout/fragment_tela_inicial" >
-        <action
-            android:id="@+id/action_telaInicial_to_telaLogin"
-            app:destination="@id/telaLogin" />
-    </fragment>
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.hpe.safeguardpro.view.MainActivity"
-        android:label="fragment_tela_relatorio_funcionario"
-        tools:layout="@layout/fragment_tela_relatorio_funcionario" />
-    <fragment
-        android:id="@+id/telaInicioGestor"
-        android:name="com.hpe.safeguardpro.view.TelaInicioGestor"
-        android:label="fragment_tela_inicio_gestor"
-        tools:layout="@layout/fragment_tela_inicio_gestor" />
+        android:id="@+id/telaInicialFuncionario"
+        android:name="com.hpe.safeguardpro.view.TelaInicialFuncionario"
+        android:label="fragment_tela_inicial_funcionario"
+        tools:layout="@layout/fragment_tela_inicial_funcionario" />
     <fragment
         android:id="@+id/telaCadastroFuncionario"
         android:name="com.hpe.safeguardpro.view.TelaCadastroFuncionario"
         android:label="TelaCadastroFuncionario" />
-    <fragment
-        android:id="@+id/telaCadastro"
-        android:name="com.hpe.safeguardpro.view.TelaCadastro"
-        android:label="fragment_tela_cadastro_epi"
-        tools:layout="@layout/fragment_tela_cadastro_epi" />
-    <fragment
-        android:id="@+id/telaRelatorioFuncionario"
-        android:name="com.hpe.safeguardpro.view.TelaRelatorioFuncionario"
-        android:label="TelaRelatorioFuncionario" />
-    <fragment
-        android:id="@+id/telaRelatorioEpi"
-        android:name="com.hpe.safeguardpro.view.TelaRelatorioEpi"
-        android:label="TelaRelatorioEpi" />
-    <fragment
-        android:id="@+id/telaEntrega"
-        android:name="com.hpe.safeguardpro.view.TelaEntrega"
-        android:label="TelaEntrega" />
-    <fragment
-        android:id="@+id/telaCadastroEpi"
-        android:name="com.hpe.safeguardpro.view.TelaCadastroEpi"
-        android:label="TelaCadastroEpi" />
 </navigation>
