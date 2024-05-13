@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/mobile_navigation">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/telaLogin">
+    <fragment
+        android:id="@+id/telaInicial"
+        android:name="com.hpe.safeguardpro.view.TelaInicial"
+        android:label="fragment_tela_inicial"
+        tools:layout="@layout/fragment_tela_inicial" />
+    <fragment
+        android:id="@+id/telaLogin"
+        android:name="com.hpe.safeguardpro.view.TelaLogin"
+        android:label="fragment_tela_login"
+        tools:layout="@layout/fragment_tela_login" />
+    <fragment
+        android:id="@+id/telaInicialFuncionario"
+        android:name="com.hpe.safeguardpro.view.TelaInicialFuncionario"
+        android:label="fragment_tela_inicial_funcionario"
+        tools:layout="@layout/fragment_tela_inicial_funcionario" />
+    <fragment
+        android:id="@+id/telaCadastroFuncionario"
+        android:name="com.hpe.safeguardpro.view.TelaCadastroFuncionario"
+        android:label="TelaCadastroFuncionario" />
 </navigation>
