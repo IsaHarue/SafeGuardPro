@@ -20,7 +20,7 @@
 
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textSuasEpis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -32,173 +32,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card1"
-                android:layout_width="305dp"
-                android:layout_height="105dp"
-                android:layout_marginTop="70dp"
-                android:backgroundTint="@color/roxo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPessoas"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_constraintTop_toBottomOf="@+id/textSuasEpis"
+                tools:layout_editor_absoluteX="0dp"
+                tools:listitem="@layout/fragment_list_epi_funcionario" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/image1"
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_marginStart="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI3"
-                        app:layout_constraintStart_toStartOf="@+id/vItensEPI3"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI3"
-                        app:layout_constraintVertical_bias="0.486"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/tvItemEPI1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EPIs"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI4"
-                        app:layout_constraintEnd_toEndOf="@+id/vItensEPI4"
-                        app:layout_constraintStart_toEndOf="@+id/image4"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI4" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card2"
-                android:layout_width="305dp"
-                android:layout_height="105dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/roxo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card1">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/image2"
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_marginStart="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI3"
-                        app:layout_constraintStart_toStartOf="@+id/vItensEPI3"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI3"
-                        app:layout_constraintVertical_bias="0.486"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/tvItemEPI2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EPIs"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI4"
-                        app:layout_constraintEnd_toEndOf="@+id/vItensEPI4"
-                        app:layout_constraintStart_toEndOf="@+id/image4"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI4" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card3"
-                android:layout_width="305dp"
-                android:layout_height="105dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/roxo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card2">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/image3"
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_marginStart="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI"
-                        app:layout_constraintStart_toStartOf="@+id/vItensEPI"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI"
-                        app:layout_constraintVertical_bias="0.513"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/tvItemEPI3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EPIs"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI3"
-                        app:layout_constraintEnd_toEndOf="@+id/vItensEPI3"
-                        app:layout_constraintStart_toEndOf="@+id/image3"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI3" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card4"
-                android:layout_width="305dp"
-                android:layout_height="105dp"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="@color/roxo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card3">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/image4"
-                        android:layout_width="79dp"
-                        android:layout_height="68dp"
-                        android:layout_marginStart="20dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI"
-                        app:layout_constraintStart_toStartOf="@+id/vItensEPI"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI"
-                        app:layout_constraintVertical_bias="0.513"
-                        tools:srcCompat="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/tvItemEPI4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EPIs"
-                        android:textColor="@color/white"
-                        android:textSize="40sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/vItensEPI4"
-                        app:layout_constraintEnd_toEndOf="@+id/vItensEPI4"
-                        app:layout_constraintStart_toEndOf="@+id/image4"
-                        app:layout_constraintTop_toTopOf="@+id/vItensEPI4" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
