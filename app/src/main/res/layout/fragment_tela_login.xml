@@ -8,37 +8,17 @@
     tools:context=".view.TelaLogin"
     >
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="78dp"
-        android:background="@color/black"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="87dp"
-        android:layout_height="79dp"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_sem_fundo" />
-
-
     <TextView
         android:id="@+id/tvlogin"
-        android:layout_width="94dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="150sp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
         android:text="Login"
         android:textColor="@color/white"
-        android:textSize="35sp"
+        android:textSize="55sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -107,19 +87,19 @@
             android:layout_height="wrap_content"
             android:text="Ainda não tem uma conta ?"
             android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/button3"
-            app:layout_constraintStart_toStartOf="@id/button3"/>
+            app:layout_constraintTop_toTopOf="@id/tvcriarconta"
+            app:layout_constraintStart_toStartOf="@id/edtsenha"/>
 
         <TextView
             android:id="@+id/tvcriarconta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
             android:text="Criar conta"
             android:textColor="@color/azul3"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/tvfrase"
-            app:layout_constraintTop_toBottomOf="@id/button3"
-            android:layout_marginStart="15dp"/>
+            app:layout_constraintEnd_toEndOf="@id/edtsenha"
+            app:layout_constraintTop_toBottomOf="@+id/edtsenha" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

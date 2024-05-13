@@ -7,14 +7,6 @@
     android:background="@color/cinza"
     tools:context=".view.TelaCadastro">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="87dp"
-        android:layout_height="79dp"
-        app:srcCompat="@drawable/logo_sem_fundo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-         />
 
     <TextView
         android:id="@+id/textView"
@@ -22,9 +14,9 @@
         android:layout_height="wrap_content"
         android:text="Fulaninho da Silva"
         android:textColor="@color/roxo2"
-        android:textSize="25sp"
+        android:textSize="50sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

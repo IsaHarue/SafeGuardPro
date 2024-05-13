@@ -8,28 +8,6 @@
     tools:context=".view.TelaCadastro"
     >
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="78dp"
-        android:background="@color/black"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="87dp"
-        android:layout_height="79dp"
-        app:srcCompat="@drawable/logo_sem_fundo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-
     <TextView
         android:id="@+id/tvcadastro"
         android:layout_width="wrap_content"
@@ -38,10 +16,10 @@
         android:textColor="@color/white"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtnome"
