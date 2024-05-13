@@ -10,7 +10,6 @@ import com.hpe.safeguardpro.R
 import com.hpe.safeguardpro.databinding.FragmentTelaLoginBinding
 
 class TelaLogin : Fragment() {
-    // TODO: Rename and change types of parameters
     private var _binding: FragmentTelaLoginBinding? = null
     private val binding: FragmentTelaLoginBinding get() = _binding!!
 
@@ -30,7 +29,7 @@ class TelaLogin : Fragment() {
         }
 
         binding.tvcriarconta.setOnClickListener {
-            findNavController().navigate(R.id.telaCadastroFuncionario)
+            findNavController().navigate(R.id.telaCadastro)
         }
 
     }

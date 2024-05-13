@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtsenha" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCadastrar"
         android:layout_width="255dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/azul2"
@@ -118,23 +118,23 @@
         android:layout_marginTop="50dp"/>
 
     <TextView
-        android:id="@+id/tvfazerlogin"
+        android:id="@+id/tvFazerLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fazer Login"
         android:textColor="@color/azul3"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3"/>
+        app:layout_constraintEnd_toEndOf="@id/btnCadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastrar"/>
 
     <TextView
-        android:id="@+id/tvfrase2"
+        android:id="@+id/tvFraseConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Já tem uma conta ?"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@id/button3"
-        app:layout_constraintTop_toBottomOf="@id/button3"
+        app:layout_constraintStart_toStartOf="@id/btnCadastrar"
+        app:layout_constraintTop_toBottomOf="@id/btnCadastrar"
 
          />
 
