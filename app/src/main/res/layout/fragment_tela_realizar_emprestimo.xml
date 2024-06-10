@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/tvcadastro"
+        android:id="@+id/tvCadastro"
         android:layout_width="wrap_content"
         android:layout_height="56dp"
         android:text="Relizar Empréstimo"
@@ -23,44 +23,44 @@
         android:layout_marginTop="10dp"/>
 
     <EditText
-        android:id="@+id/edtnome"
+        android:id="@+id/edtNome"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
-        app:layout_constraintStart_toStartOf="@id/tvnome"
-        app:layout_constraintTop_toBottomOf="@+id/tvnome" />
+        app:layout_constraintStart_toStartOf="@id/tvNome"
+        app:layout_constraintTop_toBottomOf="@+id/tvNome" />
 
     <EditText
-        android:id="@+id/edtemail"
+        android:id="@+id/edtEmail"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
         android:ems="10"
         android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/tvemail"
-        app:layout_constraintTop_toBottomOf="@+id/tvemail" />
+        app:layout_constraintStart_toStartOf="@+id/tvEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
 
     <TextView
-        android:id="@+id/tvnome"
+        android:id="@+id/tvNome"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:text="Nome do Funcionario:"
         android:textColor="@color/white"
         android:textSize="17sp"
         android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="@+id/tvcadastro"
-        app:layout_constraintTop_toBottomOf="@+id/tvcadastro" />
+        app:layout_constraintStart_toStartOf="@+id/tvCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/tvCadastro" />
 
     <TextView
-        android:id="@+id/tvemail"
+        android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_marginTop="38dp"
         android:text="Nome do EPI:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@+id/edtnome"
-        app:layout_constraintTop_toBottomOf="@+id/edtnome" />
+        app:layout_constraintStart_toStartOf="@+id/edtNome"
+        app:layout_constraintTop_toBottomOf="@+id/edtNome" />
 
     <EditText
         android:id="@+id/edtIdade"
@@ -80,8 +80,8 @@
         android:text="ID do EPI:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@id/edtemail"
-        app:layout_constraintTop_toBottomOf="@+id/edtemail" />
+        app:layout_constraintStart_toStartOf="@id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
     <EditText
         android:id="@+id/edtCpf"
@@ -103,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtIdade" />
 
     <Button
-        android:id="@+id/emprestimo"
+        android:id="@+id/btnFinalizar"
         android:layout_width="255dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/azul2"
