@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.TelaDetalhesFuncionario"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/tvutilisar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fulaninho da Silva"
+        android:textColor="@color/roxo2"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/cinzaC"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/cinzaC"
+                        >
+
+                            <TextView
+                                android:id="@+id/tvTextoId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="ID : 35646443754775"
+                                android:textColor="@color/white"
+                                android:textSize="26sp"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:layout_marginTop="20dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/tvTextoCpf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="CPF: 423739015"
+                                android:textColor="@color/white"
+                                android:textSize="26sp"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:layout_marginTop="20dp"
+                                app:layout_constraintTop_toBottomOf="@+id/tvTextoId"
+                                />
+
+                            <TextView
+                                android:id="@+id/tvTextoEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="E-Mail: fulaninhodasilva@gmail"
+                                android:textColor="@color/white"
+                                android:textSize="26sp"
+                                android:textAlignment="center"
+                                android:textStyle="bold"
+                                android:layout_marginTop="20dp"
+                                app:layout_constraintTop_toBottomOf="@id/tvTextoCpf"
+                                />
+
+                            <TextView
+                                android:id="@+id/tvTextoIdade"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Idade: 47"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="20dp"
+                                app:layout_constraintTop_toBottomOf="@id/tvTextoEmail"
+                               />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+</LinearLayout>
