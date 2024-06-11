@@ -1,26 +1,25 @@
 package com.hpe.safeguardpro.view.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hpe.safeguardpro.databinding.FragmentListItemPessoaBinding
-import com.hpe.safeguardpro.service.model.Pessoa
+import com.hpe.safeguardpro.service.model.Funcionario
 
-class ItemPessoaAdapter(pessoas: List<Pessoa>?, private val clickListListener: (Pessoa) -> Unit) :
+class ItemPessoaAdapter(funcionarios: List<Funcionario>?, private val clickListListener: (Funcionario) -> Unit) :
     RecyclerView.Adapter<ItemPessoaAdapter.PessoaViewHolder>() {
 
-    private var itemPessoaList: List<Pessoa> = arrayListOf()
+    private var itemFuncionarioList: List<Funcionario> = arrayListOf()
 
     class PessoaViewHolder(private val binding: FragmentListItemPessoaBinding) :
         RecyclerView.ViewHolder(binding.root) {
         //carrega as informacoes da pessoa na lista
-        fun bind(pessoa: Pessoa, clickListListener: (Pessoa) -> Unit) {
+        fun bind(funcionario: Funcionario, clickListListener: (Funcionario) -> Unit) {
             //onde meche
 
             //configura o click de algum item da lista
             binding.root.setOnClickListener{
-                clickListListener(pessoa)
+                clickListListener(funcionario)
             }
         }
     }
@@ -32,16 +31,16 @@ class ItemPessoaAdapter(pessoas: List<Pessoa>?, private val clickListListener: (
     }
 
     override fun getItemCount(): Int {
-        return itemPessoaList.count()
+        return itemFuncionarioList.count()
     }
 
     override fun onBindViewHolder(holder: PessoaViewHolder, position: Int) {
-        holder.bind(itemPessoaList[position], clickListListener)
+        holder.bind(itemFuncionarioList[position], clickListListener)
     }
 
     //carrega a lista de pessoa para serem exibidas
-    fun updatePessoas(list: List<Pessoa>) {
-        itemPessoaList = list
+    fun updatePessoas(list: List<Funcionario>) {
+        itemFuncionarioList = list
         notifyDataSetChanged()
     }
 }

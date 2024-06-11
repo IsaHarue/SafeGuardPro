@@ -25,7 +25,7 @@ class TelaLogin : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnLogar.setOnClickListener {
-            findNavController().navigate(R.id.telaInicialFuncionario)
+            findNavController().navigate(R.id.telaInicioGestor)
         }
 
         binding.tvcriarconta.setOnClickListener {

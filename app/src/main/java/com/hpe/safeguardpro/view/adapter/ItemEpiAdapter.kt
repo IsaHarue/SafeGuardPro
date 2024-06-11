@@ -4,9 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hpe.safeguardpro.databinding.FragmentListItemEpiBinding
-import com.hpe.safeguardpro.databinding.FragmentListItemPessoaBinding
 import com.hpe.safeguardpro.service.model.Epi
-import com.hpe.safeguardpro.service.model.Pessoa
 
 class ItemEpiAdapter(Epis: List<Epi>?, private val clickListListener: (Epi) -> Unit) :
     RecyclerView.Adapter<ItemEpiAdapter.EpiViewHolder>() {

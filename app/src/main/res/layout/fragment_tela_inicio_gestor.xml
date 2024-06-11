@@ -8,8 +8,8 @@
     tools:context=".view.TelaInicioGestor">
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_epi"
         android:layout_width="305dp"
         android:layout_height="105dp"
         android:layout_marginTop="50dp"
@@ -18,140 +18,92 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
+
 
             <TextView
                 android:id="@+id/tvItemEPI1"
-                android:layout_width="199dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginTop="30dp"
-                android:text="Cadastrar EPI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EPI"
                 android:textColor="@color/white"
                 android:textSize="32sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-    android:id="@+id/card2"
-    android:layout_width="305dp"
-    android:layout_height="105dp"
-    android:layout_marginTop="20dp"
-    android:backgroundTint="@color/roxo"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/card1">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+    </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/tvItemEPI2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginTop="15dp"
-            android:text="Cadastrar Fucionarios"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card3"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_funcionario"
         android:layout_width="305dp"
         android:layout_height="105dp"
-        android:layout_marginTop="20dp"
         android:backgroundTint="@color/roxo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card2">
+        app:layout_constraintTop_toBottomOf="@+id/card_epi"
+        android:layout_marginTop="0.5in">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
+
 
             <TextView
-                android:id="@+id/tvItemEPI3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginTop="15dp"
-                android:text="Relatorios EPIs"
+                android:id="@+id/tvItemFUNCIONARIO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FUNCIONARIO"
                 android:textColor="@color/white"
                 android:textSize="32sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card4"
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_entrega"
         android:layout_width="305dp"
         android:layout_height="105dp"
-        android:layout_marginTop="20dp"
         android:backgroundTint="@color/roxo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card3">
+        app:layout_constraintTop_toBottomOf="@+id/card_funcionario"
+        android:layout_marginTop="0.5in">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
+
 
             <TextView
-                android:id="@+id/tvItemEPI4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginTop="15dp"
-                android:text="Relatorios Funcionarios"
+                android:id="@+id/tvItemENTREGA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENTREGA"
                 android:textColor="@color/white"
                 android:textSize="32sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card5"
-        android:layout_width="305dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/roxo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card4">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+    </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:id="@+id/tvItemEPI5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginTop="20dp"
-
-                android:text="Entrega EPIs"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
