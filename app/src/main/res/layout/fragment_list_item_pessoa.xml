@@ -40,7 +40,7 @@
                 android:id="@+id/tvItemEPI1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Funcionarios"
+                android:text=" Funcionarios"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
