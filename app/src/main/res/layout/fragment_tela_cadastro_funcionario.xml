@@ -70,21 +70,21 @@
         />
 
     <EditText
-        android:id="@+id/edtIdade"
+        android:id="@+id/edtData"
         android:layout_width="255dp"
         android:layout_height="46dp"
         android:background="@color/cinzaC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIdade" />
+        app:layout_constraintTop_toBottomOf="@+id/tvData" />
 
     <TextView
-        android:id="@+id/tvIdade"
-        android:layout_width="62dp"
+        android:id="@+id/tvData"
+        android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_marginTop="30dp"
-        android:text="Idade:"
+        android:text="Data de Nascimento:"
         android:textColor="@color/white"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="@id/edtemail"
@@ -109,12 +109,12 @@
         android:layout_marginTop="25dp"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@id/edtIdade"
-        app:layout_constraintTop_toBottomOf="@id/edtIdade"
+        app:layout_constraintStart_toStartOf="@id/edtData"
+        app:layout_constraintTop_toBottomOf="@id/edtData"
         />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_cadastrar_funcionario"
         android:layout_width="255dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/azul2"

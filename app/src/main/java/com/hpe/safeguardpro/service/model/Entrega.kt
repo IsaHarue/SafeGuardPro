@@ -8,7 +8,7 @@ data class Entrega(
     @PrimaryKey
     var id: Int = 0,
     var tempo: String = "",
-    var dataFabricacao: Int = 0,
-    var funcionario: Funcionario,
-    var epi: Epi
+    var dataEntrega: String = "",
+    var funcionarioId: Int,
+    var epiId: Int
 )

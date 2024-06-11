@@ -47,4 +47,30 @@
         android:id="@+id/telaCadastroEntrega"
         android:name="com.hpe.safeguardpro.view.TelaCadastroEntrega"
         android:label="TelaCadastroEntrega" />
+    <fragment
+        android:id="@+id/telaDetalhesEpi"
+        android:name="com.hpe.safeguardpro.view.TelaDetalhesEpi"
+        android:label="fragment_tela_detalhes_epi"
+        tools:layout="@layout/fragment_tela_detalhes_epi" />
+    <fragment
+        android:id="@+id/telaDetalhesFuncionario"
+        android:name="com.hpe.safeguardpro.view.TelaDetalhesFuncionario"
+        android:label="fragment_tela_detalhes_funcionario"
+        tools:layout="@layout/fragment_tela_detalhes_funcionario" />
+    <fragment
+        android:id="@+id/listEpiFuncionario"
+        android:name="com.hpe.safeguardpro.view.ListEpiFuncionario"
+        android:label="ListEpiFuncionario" />
+    <fragment
+        android:id="@+id/listItemEpi"
+        android:name="com.hpe.safeguardpro.view.ListItemEpi"
+        android:label="ListItemEpi" />
+    <fragment
+        android:id="@+id/listItemFuncionario"
+        android:name="com.hpe.safeguardpro.view.ListItemFuncionario"
+        android:label="ListItemFuncionario" />
+    <fragment
+        android:id="@+id/telaDetalhesEntrega"
+        android:name="com.hpe.safeguardpro.view.TelaDetalhesEntrega"
+        android:label="TelaDetalhesEntrega" />
 </navigation>

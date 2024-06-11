@@ -42,19 +42,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tvnome" />
 
     <EditText
-        android:id="@+id/edtemail"
+        android:id="@+id/edtepi"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
         android:ems="10"
         android:inputType="textEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/tvemail"
-        app:layout_constraintTop_toBottomOf="@+id/tvemail" />
+        app:layout_constraintStart_toStartOf="@+id/tvepi"
+        app:layout_constraintTop_toBottomOf="@+id/tvepi" />
 
 
 
     <TextView
-        android:id="@+id/tvemail"
+        android:id="@+id/tvepi"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_marginTop="38dp"
@@ -65,56 +65,80 @@
         app:layout_constraintTop_toBottomOf="@+id/edtnome" />
 
     <EditText
-        android:id="@+id/edtIdade"
+        android:id="@+id/edtEntrega"
         android:layout_width="255dp"
         android:layout_height="46dp"
         android:background="@color/cinzaC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvIdade"/>
+        app:layout_constraintTop_toBottomOf="@id/tvEntrega"/>
 
     <TextView
-        android:id="@+id/tvIdade"
+        android:id="@+id/tvEntrega"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_marginTop="27dp"
-        android:text="ID do EPI:"
+        android:text="Entrega:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@id/edtemail"
-        app:layout_constraintTop_toBottomOf="@+id/edtemail" />
+        app:layout_constraintStart_toStartOf="@id/edtepi"
+        app:layout_constraintTop_toBottomOf="@+id/edtepi" />
 
     <EditText
-        android:id="@+id/edtCpf"
+        android:id="@+id/edtValidade"
         android:layout_width="255dp"
         android:layout_height="46dp"
+        android:layout_marginTop="9dp"
         android:background="@color/cinzaC"
-        app:layout_constraintStart_toStartOf="@+id/tvCpf"
-        app:layout_constraintTop_toBottomOf="@+id/tvCpf" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValidade" />
 
     <TextView
-        android:id="@+id/tvCpf"
+        android:id="@+id/tvValidade"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_marginTop="37dp"
         android:text="Data de Validade:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@id/edtIdade"
-        app:layout_constraintTop_toBottomOf="@+id/edtIdade" />
+        app:layout_constraintStart_toStartOf="@id/edtEntrega"
+        app:layout_constraintTop_toBottomOf="@+id/edtEntrega" />
+
+    <EditText
+        android:id="@+id/edtdataCA"
+        android:layout_width="255dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="9dp"
+        android:background="@color/cinzaC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvValidade" />
+
+    <TextView
+        android:id="@+id/tvdataCA"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="37dp"
+        android:text="Data de Validade:"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/edtVa"
+        app:layout_constraintTop_toBottomOf="@+id/edtEntrega" />
+
 
     <Button
         android:id="@+id/btn_emprestimo"
         android:layout_width="255dp"
         android:layout_height="48dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="@color/azul2"
         android:text="Finalizar"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtCpf"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/edtValidade" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

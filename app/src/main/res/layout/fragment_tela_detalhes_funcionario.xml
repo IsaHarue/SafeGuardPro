@@ -9,7 +9,7 @@
     android:background="@color/black">
 
     <TextView
-        android:id="@+id/tvutilisar"
+        android:id="@+id/tvNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fulaninho da Silva"
@@ -38,7 +38,7 @@
                         >
 
                             <TextView
-                                android:id="@+id/tvTextoId"
+                                android:id="@+id/tvId"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="ID : 35646443754775"
@@ -51,7 +51,7 @@
                                 />
 
                             <TextView
-                                android:id="@+id/tvTextoCpf"
+                                android:id="@+id/tvCpf"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="CPF: 423739015"
@@ -60,11 +60,11 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:layout_marginTop="20dp"
-                                app:layout_constraintTop_toBottomOf="@+id/tvTextoId"
+                                app:layout_constraintTop_toBottomOf="@+id/tvId"
                                 />
 
                             <TextView
-                                android:id="@+id/tvTextoEmail"
+                                android:id="@+id/tvEmail"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="E-Mail: fulaninhodasilva@gmail"
@@ -73,20 +73,20 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:layout_marginTop="20dp"
-                                app:layout_constraintTop_toBottomOf="@id/tvTextoCpf"
+                                app:layout_constraintTop_toBottomOf="@id/tvCpf"
                                 />
 
                             <TextView
-                                android:id="@+id/tvTextoIdade"
+                                android:id="@+id/tvData"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Idade: 47"
+                                android:text="Data de nasc: "
                                 android:textAlignment="center"
                                 android:textColor="@color/white"
                                 android:textSize="26sp"
                                 android:textStyle="bold"
                                 android:layout_marginTop="20dp"
-                                app:layout_constraintTop_toBottomOf="@id/tvTextoEmail"
+                                app:layout_constraintTop_toBottomOf="@id/tvEmail"
                                />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

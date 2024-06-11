@@ -5,56 +5,90 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.hpe.safeguardpro.R
+import android.widget.Toast
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.hpe.safeguardpro.databinding.FragmentTelaCadastroEpiBinding
+import com.hpe.safeguardpro.service.model.Epi
+import com.hpe.safeguardpro.viewmodel.EpiViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [TelaCadastroEpi.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TelaCadastroEpi : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private val viewModel: EpiViewModel by viewModels()
+
+    private var _binding: FragmentTelaCadastroEpiBinding? = null
+    private val binding: FragmentTelaCadastroEpiBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tela_cadastro_epi, container, false)
+        _binding = FragmentTelaCadastroEpiBinding.inflate(inflater, container, false)
+        return binding.root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TelaCadastroEpi.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TelaCadastroEpi().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        arguments?.let {
+            viewModel.getEpi(it.getInt("epiId"))
+        }
+
+        binding.btnCadastrarEpi.setOnClickListener {
+            val nome = binding.edtnome.editableText.toString()
+            val dataF = binding.edtDataF.editableText.toString()
+            val validadade = binding.edtvalidade.editableText.toString()
+            val descricao = binding.edtdescricao.editableText.toString()
+
+            if (nome != "" && dataF != "" && validadade != "" && descricao != "") {
+                val epi = Epi(
+                    nome = nome,
+                    dataF = dataF,
+                    validade = validadade,
+                    descricao = descricao
+                )
+
+                viewModel.createdepi.value?.let {
+                    epi.id = it.id
+                    viewModel.update(epi)
+                    viewModel.insert(epi)
+                }
+
+                findNavController().navigateUp()
+
+                binding.edtnome.editableText.clear()
+                binding.edtDataF.editableText.clear()
+                binding.edtvalidade.editableText.clear()
+                binding.edtdescricao.editableText.clear()
+            } else {
+                Toast.makeText(requireContext(), "Digite os dados", Toast.LENGTH_LONG).show()
+            }
+
+            viewModel.createdepi.observe(viewLifecycleOwner) {
+                if (it.id == 0) {
+                    Toast.makeText(
+                        requireContext(),
+                        "Epi não foi possivel ser criado",
+                        Toast.LENGTH_LONG
+                    ).show()
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Epi ${it.nome} criada com sucesso",
+                        Toast.LENGTH_LONG
+                    ).show()
+
+                    binding.edtnome.editableText.clear()
+                    binding.edtDataF.editableText.clear()
+                    binding.edtvalidade.editableText.clear()
+                    binding.edtdescricao.editableText.clear()
+                    findNavController().navigateUp()
                 }
             }
+            viewModel.erro.observe(viewLifecycleOwner) {
+                Toast.makeText(requireContext(), "Erro $it", Toast.LENGTH_LONG).show()
+
+            }
+        }
+
     }
 }

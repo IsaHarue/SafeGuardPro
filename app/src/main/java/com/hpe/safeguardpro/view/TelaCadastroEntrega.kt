@@ -5,56 +5,95 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.hpe.safeguardpro.R
+import com.hpe.safeguardpro.databinding.FragmentTelaCadastroEntregaBinding
+import com.hpe.safeguardpro.service.model.Entrega
+import com.hpe.safeguardpro.viewmodel.EntregaViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [TelaCadastroEntrega.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TelaCadastroEntrega : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private val viewModel: EntregaViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentTelaCadastroEntregaBinding? = null
+    private val binding: FragmentTelaCadastroEntregaBinding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tela_cadastro_entrega, container, false)
+        _binding = FragmentTelaCadastroEntregaBinding.inflate(inflater, container, false)
+        return binding.root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TelaCadastroEntrega.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TelaCadastroEntrega().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        arguments?.let {
+            viewModel.getEntrega( it.getInt("entregaId"))
+        }
+
+        binding.btnEmprestimo.setOnClickListener {
+            val funcionario = binding.edtnome.editableText.toString()
+            val epi = binding.edtepi.editableText.toString()
+            val entrega = binding.edtEntrega.editableText.toString()
+            val validade = binding.edtValidade.editableText.toString()
+
+            val tempo = validade - entrega
+
+            if (funcionario != "" && epi != "" && entrega != "" && validade != "") {
+                val entrega = Entrega(
+                    funcionarioId = funcionario,
+                    epiId = epi,
+                    dataEntrega = entrega,
+                    tempo = tempo
+                )
+
+                viewModel.createdentrega.value?.let {
+                    entrega.id = it.id
+                    viewModel.update(entrega)
+                    viewModel.insert(entrega)
+                }
+
+                findNavController().navigateUp()
+
+                binding.edtnome.editableText.clear()
+                binding.edtepi.editableText.clear()
+                binding.edtEntrega.editableText.clear()
+                binding.edtValidade.editableText.clear()
+            } else {
+                Toast.makeText(requireContext(), "Digite os dados", Toast.LENGTH_LONG).show()
+            }
+
+            viewModel.createdentrega.observe(viewLifecycleOwner) {
+                if (it.id == 0) {
+                    Toast.makeText(
+                        requireContext(),
+                        "Entrega não foi possivel ser criado",
+                        Toast.LENGTH_LONG
+                    ).show()
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Entrega ${it.id} criada com sucesso",
+                        Toast.LENGTH_LONG
+                    ).show()
+
+                    binding.edtnome.editableText.clear()
+                    binding.edtepi.editableText.clear()
+                    binding.edtEntrega.editableText.clear()
+                    binding.edtValidade.editableText.clear()
+                    findNavController().navigateUp()
                 }
             }
+            viewModel.erro.observe(viewLifecycleOwner) {
+                Toast.makeText(requireContext(), "Erro $it", Toast.LENGTH_LONG).show()
+
+            }
+        }
+
     }
+
 }

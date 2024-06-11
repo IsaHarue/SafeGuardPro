@@ -11,7 +11,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class FuncionarioViewModel (application: Application) : AndroidViewModel(application) {
-    private val Frepository = FuncionarioRepository(application)
+    private val repository = FuncionarioRepository(application)
+
+    private val mFuncionarioList = MutableLiveData<List<Funcionario>>()
+    val funcionarioList: LiveData<List<Funcionario>> = mFuncionarioList
 
     private val mCreatedFuncionario = MutableLiveData<Funcionario>()
     val createdfuncionario: LiveData<Funcionario> = mCreatedFuncionario
@@ -22,10 +25,20 @@ class FuncionarioViewModel (application: Application) : AndroidViewModel(applica
     private val mDeletedFuncionrio = MutableLiveData<Boolean>()
     val deletedFuncionario: LiveData<Boolean> = mDeletedFuncionrio
 
-    fun insert(api: Boolean, funcionario: Funcionario) {
+    fun load() {
+        viewModelScope.launch(Dispatchers.IO){
+            try {
+                mFuncionarioList.postValue(repository.getFuncionarios())
+            } catch (e: Exception){
+                mErro.postValue(e.message)
+            }
+        }
+    }
+
+    fun insert(funcionario: Funcionario) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                val createdFuncionario = Frepository.insertFuncionario(api, funcionario)
+                val createdFuncionario = repository.insertFuncionario( funcionario)
                 mCreatedFuncionario.postValue(createdFuncionario)
             } catch (e: Exception){
                 mErro.postValue(e.message)
@@ -33,26 +46,26 @@ class FuncionarioViewModel (application: Application) : AndroidViewModel(applica
         }
     }
 
-    fun getFuncionario(api: Boolean, id: Int) {
+    fun getFuncionario(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                mCreatedFuncionario.postValue(Frepository.getFuncionario(api, id))
+                mCreatedFuncionario.postValue(repository.getFuncionario(id))
             }catch (e: Exception){
                 mErro.postValue(e.message)
             }
         }
     }
 
-    fun update(api: Boolean, funcionario: Funcionario) {
+    fun update(funcionario: Funcionario) {
         viewModelScope.launch(Dispatchers.IO) {
-            Frepository.updateFuncionario(api, funcionario.id, funcionario)
+            repository.updateFuncionario(funcionario)
         }
     }
 
-    fun delete(api: Boolean, id: Int) {
+    fun delete(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                mDeletedFuncionrio.postValue(Frepository.deleteFuncionario(api, id))
+                mDeletedFuncionrio.postValue(repository.deleteFuncionario(id))
             } catch (e: Exception) {
                 mErro.postValue(e.message)
             }

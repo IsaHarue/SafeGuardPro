@@ -5,10 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.hpe.safeguardpro.service.model.Epi
-import com.hpe.safeguardpro.service.model.Funcionario
 
 //Colocar as entidades do projeto
-@Database(entities = [Funcionario::class],[Epi::class], version = 1)
+@Database(entities = [Epi::class],[Epi::class], version = 1)
 abstract class SafeGuardProDataBase : RoomDatabase() {
 
     // DAOs

@@ -41,10 +41,10 @@
             >
 
             <TextView
-                android:id="@+id/tvtextoIdEntrega"
+                android:id="@+id/tvtempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ID da Entrega: 35646443754775"
+                android:text="tempo: 543 dias"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold"
@@ -54,14 +54,14 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/tvtextoDataEmprestimo"
+                android:id="@+id/tvtextoDataEntrega"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Data do Emprestimo: 03/07/2026"
+                android:text="Data da entrega: 03/07/2026"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/tvtextoIdEntrega"
+                app:layout_constraintTop_toBottomOf="@id/tvtempo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textAlignment="center"
@@ -75,7 +75,7 @@
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/tvtextoDataEmprestimo"
+                app:layout_constraintTop_toBottomOf="@id/tvtextoDataEntrega"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textAlignment="center"

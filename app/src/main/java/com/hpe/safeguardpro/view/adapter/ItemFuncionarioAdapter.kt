@@ -3,15 +3,16 @@ package com.hpe.safeguardpro.view.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.hpe.safeguardpro.databinding.FragmentListItemPessoaBinding
+import com.hpe.safeguardpro.databinding.FragmentListItemFuncionarioBinding
+import com.hpe.safeguardpro.service.model.Epi
 import com.hpe.safeguardpro.service.model.Funcionario
 
-class ItemPessoaAdapter(funcionarios: List<Funcionario>?, private val clickListListener: (Funcionario) -> Unit) :
-    RecyclerView.Adapter<ItemPessoaAdapter.PessoaViewHolder>() {
+class ItemFuncionarioAdapter(funcionarios: List<Funcionario>?, private val clickListListener: (Funcionario) -> Unit) :
+    RecyclerView.Adapter<ItemFuncionarioAdapter.PessoaViewHolder>() {
 
     private var itemFuncionarioList: List<Funcionario> = arrayListOf()
 
-    class PessoaViewHolder(private val binding: FragmentListItemPessoaBinding) :
+    class PessoaViewHolder(private val binding: FragmentListItemFuncionarioBinding) :
         RecyclerView.ViewHolder(binding.root) {
         //carrega as informacoes da pessoa na lista
         fun bind(funcionario: Funcionario, clickListListener: (Funcionario) -> Unit) {
@@ -26,7 +27,7 @@ class ItemPessoaAdapter(funcionarios: List<Funcionario>?, private val clickListL
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PessoaViewHolder {
         val listItemPessoaBinding =
-            FragmentListItemPessoaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            FragmentListItemFuncionarioBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PessoaViewHolder(listItemPessoaBinding)
     }
 
@@ -39,7 +40,7 @@ class ItemPessoaAdapter(funcionarios: List<Funcionario>?, private val clickListL
     }
 
     //carrega a lista de pessoa para serem exibidas
-    fun updatePessoas(list: List<Funcionario>) {
+    fun updateFuncionarios(list: List<Funcionario>) {
         itemFuncionarioList = list
         notifyDataSetChanged()
     }

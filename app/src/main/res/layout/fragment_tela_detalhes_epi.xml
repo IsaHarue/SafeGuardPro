@@ -12,7 +12,7 @@
 
 <!-- referente a os dados do epi -->
     <TextView
-        android:id="@+id/tvTituloEpi"
+        android:id="@+id/tvnome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nome do Epi"
@@ -41,7 +41,7 @@
             >
 
             <TextView
-                android:id="@+id/tvtextoId"
+                android:id="@+id/tvId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ID : 35646443754775"
@@ -54,60 +54,47 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/tvtextoValidade"
+                android:id="@+id/tvValidade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Validade: 02/08/2026"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/tvtextoId"
+                app:layout_constraintTop_toBottomOf="@id/tvId"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textAlignment="center"
                 />
 
             <TextView
-                android:id="@+id/tvtextoFuncionalidade"
+                android:id="@+id/tvDataF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Funcionalidade: "
+                android:text="Data de fabricacao: "
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/tvtextoValidade"
+                app:layout_constraintTop_toBottomOf="@id/tvValidade"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textAlignment="center"
                 />
 
             <TextView
-                android:id="@+id/tvtextoDescricao"
+                android:id="@+id/tvDescricao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Descrição:"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/tvtextoFuncionalidade"
+                app:layout_constraintTop_toBottomOf="@id/tvDataF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:textAlignment="center"
                 />
 
-            <TextView
-                android:id="@+id/tvtextoEstado"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Estado:"
-                android:textColor="@color/white"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/tvtextoDescricao"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textAlignment="center"
-                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

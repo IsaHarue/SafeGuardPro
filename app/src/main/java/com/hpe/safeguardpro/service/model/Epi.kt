@@ -8,7 +8,8 @@ data class Epi(
     @PrimaryKey
     var id: Int = 0,
     var nome: String = "",
-    var dataFabricacao: Int = 0,
+    var dataF: String = "",
+    var dataCA: String = "",
     var validade: String = "",
-    var descricao: String = ""
+    var descricao: String = "",
 )

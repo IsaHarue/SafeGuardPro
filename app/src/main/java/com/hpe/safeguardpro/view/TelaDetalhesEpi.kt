@@ -5,56 +5,44 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.hpe.safeguardpro.R
+import com.hpe.safeguardpro.databinding.FragmentTelaCadastroFuncionarioBinding
+import com.hpe.safeguardpro.databinding.FragmentTelaDetalhesEpiBinding
+import com.hpe.safeguardpro.viewmodel.EpiViewModel
+import com.hpe.safeguardpro.viewmodel.FuncionarioViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [TelaDetalhesEpi.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TelaDetalhesEpi : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    // Chamar a viewModel para pegar dos dados
+    private val viewModel: EpiViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private var _binding: FragmentTelaDetalhesEpiBinding? = null
+    private val binding: FragmentTelaDetalhesEpiBinding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tela_detalhes_epi, container, false)
+        _binding = FragmentTelaDetalhesEpiBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TelaDetalhesEpi.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TelaDetalhesEpi().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        //pegar o id da pessoa que foi enviado pela AllPessoaFragment
+        // Carregar a pessoa caso tenha selecionado
+        //setara a pessoa para ser carregada na tela
+        arguments?.let {
+            viewModel.getEpi( it.getInt("pessoaId"))
+
+        }
+        //carregar inormacoes
+        viewModel.createdepi.observe(viewLifecycleOwner) { epi ->
+            binding.tvnome.setText(epi.nome)
+            binding.tvDataF.setText(epi.dataF)
+            binding.tvValidade.setText(epi.validade)
+            binding.tvDescricao.setText(epi.descricao)
+
+        }
     }
+
 }

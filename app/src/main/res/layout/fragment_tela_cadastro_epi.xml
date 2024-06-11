@@ -44,19 +44,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tvcadastro" />
 
     <EditText
-        android:id="@+id/edtId"
+        android:id="@+id/edtDataF"
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
-        app:layout_constraintStart_toStartOf="@+id/tvId"
-        app:layout_constraintTop_toBottomOf="@+id/tvId" />
+        app:layout_constraintStart_toStartOf="@+id/tvDataF"
+        app:layout_constraintTop_toBottomOf="@+id/tvDataF" />
 
     <TextView
-        android:id="@+id/tvId"
+        android:id="@+id/tvDataF"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="10dp"
-        android:text="ID do EPI:"
+        android:text="Data de fabricação:"
         android:textColor="@color/white"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="@+id/edtnome"
@@ -64,43 +64,43 @@
 
 
     <EditText
-        android:id="@+id/edtfuncionalidade"
+        android:id="@+id/edtvalidade"
         android:layout_width="255dp"
-        android:layout_height="100dp"
+        android:layout_height="45dp"
         android:background="@color/cinzaC"
-        app:layout_constraintStart_toStartOf="@id/tvfuncionalide"
-        app:layout_constraintTop_toBottomOf="@+id/tvfuncionalide" />
+        app:layout_constraintStart_toStartOf="@id/tvvalidade"
+        app:layout_constraintTop_toBottomOf="@+id/tvvalidade" />
 
     <TextView
-        android:id="@+id/tvfuncionalide"
+        android:id="@+id/tvvalidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Funcionalidade:"
+        android:text="Validade:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@id/edtId"
-        app:layout_constraintTop_toBottomOf="@+id/edtId" />
+        app:layout_constraintStart_toStartOf="@id/edtDataF"
+        app:layout_constraintTop_toBottomOf="@+id/edtDataF" />
 
     <EditText
-        android:id="@+id/edtmodouso"
+        android:id="@+id/edtdescricao"
         android:layout_width="255dp"
         android:layout_height="100dp"
         android:background="@color/cinzaC"
-        app:layout_constraintStart_toStartOf="@id/tvmodouso"
-        app:layout_constraintTop_toBottomOf="@+id/tvmodouso" />
+        app:layout_constraintStart_toStartOf="@id/tvdescricao"
+        app:layout_constraintTop_toBottomOf="@+id/tvdescricao" />
 
     <TextView
-        android:id="@+id/tvmodouso"
+        android:id="@+id/tvdescricao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Modo de Uso:"
+        android:text="Descrição:"
         android:textColor="@color/white"
         android:textSize="17sp"
 
-        app:layout_constraintStart_toStartOf="@+id/edtfuncionalidade"
-        app:layout_constraintTop_toBottomOf="@+id/edtfuncionalidade" />
+        app:layout_constraintStart_toStartOf="@+id/edtvalidade"
+        app:layout_constraintTop_toBottomOf="@+id/edtvalidade" />
 
     <Button
         android:id="@+id/btn_cadastrar_epi"
@@ -111,7 +111,7 @@
         android:text="Cadastrar"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@+id/edtmodouso"
-        app:layout_constraintTop_toBottomOf="@+id/edtmodouso" />
+        app:layout_constraintStart_toStartOf="@+id/edtdescricao"
+        app:layout_constraintTop_toBottomOf="@+id/edtdescricao" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

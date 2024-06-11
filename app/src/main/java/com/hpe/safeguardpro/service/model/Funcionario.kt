@@ -10,5 +10,5 @@ data class Funcionario(
     var nome: String = "",
     var email: String = "",
     var cpf: String = "",
-    var dataNasc: Int = 0,
+    var dataNasc: String = "",
 )
