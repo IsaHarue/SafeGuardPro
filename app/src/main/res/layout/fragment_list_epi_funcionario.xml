@@ -6,45 +6,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card2"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
         android:layout_width="305dp"
         android:layout_height="105dp"
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/roxo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/image1"
+                android:id="@+id/imagemCard"
                 android:layout_width="79dp"
                 android:layout_height="68dp"
-                android:layout_marginStart="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/vItensEPI3"
-                app:layout_constraintStart_toStartOf="@+id/vItensEPI3"
-                app:layout_constraintTop_toTopOf="@+id/vItensEPI3"
-                app:layout_constraintVertical_bias="0.486"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/tvItemEPI1"
+                android:id="@+id/tvItemEPI2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EPIs"
+                android:text="EPI"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/vItensEPI4"
-                app:layout_constraintEnd_toEndOf="@+id/vItensEPI4"
-                app:layout_constraintStart_toEndOf="@+id/image4"
-                app:layout_constraintTop_toTopOf="@+id/vItensEPI4" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imagemCard"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
