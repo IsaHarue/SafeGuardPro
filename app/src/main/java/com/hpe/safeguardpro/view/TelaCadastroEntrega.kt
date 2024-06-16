@@ -41,12 +41,12 @@ class TelaCadastroEntrega : Fragment() {
             val entrega = binding.edtEntrega.editableText.toString()
             val validade = binding.edtValidade.editableText.toString()
 
-            val tempo = validade - entrega
+            val tempo = "validade - entrega"
 
             if (funcionario != "" && epi != "" && entrega != "" && validade != "") {
                 val entrega = Entrega(
-                    funcionarioId = funcionario,
-                    epiId = epi,
+//                    funcionarioId = funcionario,
+//                    epiId = epi,
                     dataEntrega = entrega,
                     tempo = tempo
                 )
@@ -66,32 +66,32 @@ class TelaCadastroEntrega : Fragment() {
             } else {
                 Toast.makeText(requireContext(), "Digite os dados", Toast.LENGTH_LONG).show()
             }
+        }
 
-            viewModel.createdentrega.observe(viewLifecycleOwner) {
-                if (it.id == 0) {
-                    Toast.makeText(
-                        requireContext(),
-                        "Entrega não foi possivel ser criado",
-                        Toast.LENGTH_LONG
-                    ).show()
-                } else {
-                    Toast.makeText(
-                        requireContext(),
-                        "Entrega ${it.id} criada com sucesso",
-                        Toast.LENGTH_LONG
-                    ).show()
+        viewModel.createdentrega.observe(viewLifecycleOwner) {
+            if (it.id == 0) {
+                Toast.makeText(
+                    requireContext(),
+                    "Entrega não foi possivel ser criado",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    "Entrega ${it.id} criada com sucesso",
+                    Toast.LENGTH_LONG
+                ).show()
 
-                    binding.edtnome.editableText.clear()
-                    binding.edtepi.editableText.clear()
-                    binding.edtEntrega.editableText.clear()
-                    binding.edtValidade.editableText.clear()
-                    findNavController().navigateUp()
-                }
+                binding.edtnome.editableText.clear()
+                binding.edtepi.editableText.clear()
+                binding.edtEntrega.editableText.clear()
+                binding.edtValidade.editableText.clear()
+                findNavController().navigateUp()
             }
-            viewModel.erro.observe(viewLifecycleOwner) {
-                Toast.makeText(requireContext(), "Erro $it", Toast.LENGTH_LONG).show()
+        }
+        viewModel.erro.observe(viewLifecycleOwner) {
+            Toast.makeText(requireContext(), "Erro $it", Toast.LENGTH_LONG).show()
 
-            }
         }
 
     }

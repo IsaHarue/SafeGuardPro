@@ -64,33 +64,32 @@ class TelaCadastroFuncionario : Fragment() {
             } else {
                 Toast.makeText(requireContext(), "Digite os dados", Toast.LENGTH_LONG).show()
             }
-
-            viewModel.createdfuncionario.observe(viewLifecycleOwner) {
-                if (it.id == 0) {
-                    Toast.makeText(
-                        requireContext(),
-                        "Funcionario não foi possivel ser criado",
-                        Toast.LENGTH_LONG
-                    ).show()
-                } else {
-                    Toast.makeText(
-                        requireContext(),
-                        "Funcionario ${it.nome} criada com sucesso",
-                        Toast.LENGTH_LONG
-                    ).show()
-
-                    binding.edtnome.editableText.clear()
-                    binding.edtemail.editableText.clear()
-                    binding.edtCpf.editableText.clear()
-                    binding.edtData.editableText.clear()
-                    findNavController().navigateUp()
-                }
-            }
-            viewModel.erro.observe(viewLifecycleOwner) {
-                Toast.makeText(requireContext(), "Erro $it", Toast.LENGTH_LONG).show()
-
-            }
         }
 
+        viewModel.createdfuncionario.observe(viewLifecycleOwner) {
+            if (it.id == 0) {
+                Toast.makeText(
+                    requireContext(),
+                    "Funcionario não foi possivel ser criado",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    "Funcionario ${it.nome} criada com sucesso",
+                    Toast.LENGTH_LONG
+                ).show()
+
+                binding.edtnome.editableText.clear()
+                binding.edtemail.editableText.clear()
+                binding.edtCpf.editableText.clear()
+                binding.edtData.editableText.clear()
+                findNavController().navigateUp()
+            }
+        }
+        viewModel.erro.observe(viewLifecycleOwner) {
+            Toast.makeText(requireContext(), "Erro $it", Toast.LENGTH_LONG).show()
+
+        }
     }
 }

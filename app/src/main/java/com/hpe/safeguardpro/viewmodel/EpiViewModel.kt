@@ -10,11 +10,14 @@ import com.hpe.safeguardpro.service.repository.EpiRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class EpiViewModel (application: Application) : AndroidViewModel(application) {
+class EpiViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = EpiRepository(application)
 
     private val mEpiList = MutableLiveData<List<Epi>>()
     val epiList: LiveData<List<Epi>> = mEpiList
+
+    private val mEpi = MutableLiveData<Epi>()
+    val epi: LiveData<Epi> = mEpi
 
     private val mCreatedEpi = MutableLiveData<Epi>()
     val createdepi: LiveData<Epi> = mCreatedEpi
@@ -26,10 +29,10 @@ class EpiViewModel (application: Application) : AndroidViewModel(application) {
     val deletedEpi: LiveData<Boolean> = mDeletedEpi
 
     fun load() {
-        viewModelScope.launch(Dispatchers.IO){
+        viewModelScope.launch(Dispatchers.IO) {
             try {
                 mEpiList.postValue(repository.getEpis())
-            } catch (e: Exception){
+            } catch (e: Exception) {
                 mErro.postValue(e.message)
             }
         }
@@ -40,7 +43,7 @@ class EpiViewModel (application: Application) : AndroidViewModel(application) {
             try {
                 val createdEpi = repository.insertEpi(epi)
                 mCreatedEpi.postValue(createdEpi)
-            } catch (e: Exception){
+            } catch (e: Exception) {
                 mErro.postValue(e.message)
             }
         }
@@ -49,8 +52,18 @@ class EpiViewModel (application: Application) : AndroidViewModel(application) {
     fun getEpi(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                mCreatedEpi.postValue(repository.getEpi(id))
-            }catch (e: Exception){
+                mEpi.postValue(repository.getEpi(id))
+            } catch (e: Exception) {
+                mErro.postValue(e.message)
+            }
+        }
+    }
+
+    fun getEpiByCa(ca: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                mEpi.postValue(repository.getEpiByCa(ca))
+            } catch (e: Exception) {
                 mErro.postValue(e.message)
             }
         }
@@ -58,7 +71,12 @@ class EpiViewModel (application: Application) : AndroidViewModel(application) {
 
     fun update(epi: Epi) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.updateEpi(epi)
+            try {
+                val createdEpi = repository.updateEpi(epi)
+                mCreatedEpi.postValue(createdEpi)
+            } catch (e: Exception) {
+                mErro.postValue(e.message)
+            }
         }
     }
 

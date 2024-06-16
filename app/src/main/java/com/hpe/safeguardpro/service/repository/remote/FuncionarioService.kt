@@ -19,6 +19,8 @@ interface FuncionarioService {
         @Part("email") email: RequestBody,
         @Part("cpf") cpf: RequestBody,
         @Part("dataNasc") dataNasc: RequestBody,
+        @Part("senha") senha: RequestBody,
+        @Part("admin") admin: RequestBody,
     ): Response<Funcionario>
 
 
@@ -28,6 +30,9 @@ interface FuncionarioService {
     @GET("get_funcionario/{funcionario_id}")
     suspend fun getFuncionarioById(@Path("funcionario_id") id: Int): Response<List<Funcionario>>
 
+    @GET("get_funcionario/{funcionario_cpf}")
+    suspend fun getFuncionarioByCpf(@Path("funcionario_cpf") cpf: Int): Response<List<Funcionario>>
+
     @PUT("update_funcionario/{funcionario_id}")
     suspend fun updateFuncionario(
         @Path("funcionario_id") funcionarioId: Int,
@@ -35,6 +40,8 @@ interface FuncionarioService {
         @Part("email") cpf: RequestBody,
         @Part("cpf") email: RequestBody,
         @Part("dataNasc") dataNasc: RequestBody,
+        @Part("senha") senha: RequestBody,
+        @Part("admin") admin: RequestBody,
     ): Response<Funcionario>
 
     @DELETE("delete_funcionario{funcionario_id}")

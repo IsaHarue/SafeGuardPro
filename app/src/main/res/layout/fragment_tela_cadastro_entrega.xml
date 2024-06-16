@@ -124,7 +124,7 @@
         android:text="Data de Validade:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@id/edtVa"
+        app:layout_constraintStart_toStartOf="@id/edtdataCA"
         app:layout_constraintTop_toBottomOf="@+id/edtEntrega" />
 
 

@@ -13,6 +13,9 @@ import kotlinx.coroutines.launch
 class FuncionarioViewModel (application: Application) : AndroidViewModel(application) {
     private val repository = FuncionarioRepository(application)
 
+    private val mFuncionario = MutableLiveData<Funcionario>()
+    val funcionario: LiveData<Funcionario> = mFuncionario
+
     private val mFuncionarioList = MutableLiveData<List<Funcionario>>()
     val funcionarioList: LiveData<List<Funcionario>> = mFuncionarioList
 
@@ -49,8 +52,18 @@ class FuncionarioViewModel (application: Application) : AndroidViewModel(applica
     fun getFuncionario(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                mCreatedFuncionario.postValue(repository.getFuncionario(id))
-            }catch (e: Exception){
+                mFuncionario.postValue(repository.getFuncionario(id))
+            } catch (e: Exception) {
+                mErro.postValue(e.message)
+            }
+        }
+    }
+
+    fun getFuncionarioByCpf(cpf: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                mFuncionario.postValue(repository.getFuncionarioByCpf(cpf))
+            } catch (e: Exception) {
                 mErro.postValue(e.message)
             }
         }
@@ -58,7 +71,12 @@ class FuncionarioViewModel (application: Application) : AndroidViewModel(applica
 
     fun update(funcionario: Funcionario) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.updateFuncionario(funcionario)
+            try {
+                val createdFuncionario = repository.updateFuncionario(funcionario)
+                mCreatedFuncionario.postValue(createdFuncionario)
+            } catch (e: Exception) {
+                mErro.postValue(e.message)
+            }
         }
     }
 

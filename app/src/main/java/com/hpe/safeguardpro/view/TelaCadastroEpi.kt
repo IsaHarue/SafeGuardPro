@@ -62,32 +62,32 @@ class TelaCadastroEpi : Fragment() {
             } else {
                 Toast.makeText(requireContext(), "Digite os dados", Toast.LENGTH_LONG).show()
             }
+        }
 
-            viewModel.createdepi.observe(viewLifecycleOwner) {
-                if (it.id == 0) {
-                    Toast.makeText(
-                        requireContext(),
-                        "Epi não foi possivel ser criado",
-                        Toast.LENGTH_LONG
-                    ).show()
-                } else {
-                    Toast.makeText(
-                        requireContext(),
-                        "Epi ${it.nome} criada com sucesso",
-                        Toast.LENGTH_LONG
-                    ).show()
+        viewModel.createdepi.observe(viewLifecycleOwner) {
+            if (it.id == 0) {
+                Toast.makeText(
+                    requireContext(),
+                    "Epi não foi possivel ser criado",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    "Epi ${it.nome} criada com sucesso",
+                    Toast.LENGTH_LONG
+                ).show()
 
-                    binding.edtnome.editableText.clear()
-                    binding.edtDataF.editableText.clear()
-                    binding.edtvalidade.editableText.clear()
-                    binding.edtdescricao.editableText.clear()
-                    findNavController().navigateUp()
-                }
+                binding.edtnome.editableText.clear()
+                binding.edtDataF.editableText.clear()
+                binding.edtvalidade.editableText.clear()
+                binding.edtdescricao.editableText.clear()
+                findNavController().navigateUp()
             }
-            viewModel.erro.observe(viewLifecycleOwner) {
-                Toast.makeText(requireContext(), "Erro $it", Toast.LENGTH_LONG).show()
+        }
+        viewModel.erro.observe(viewLifecycleOwner) {
+            Toast.makeText(requireContext(), "Erro $it", Toast.LENGTH_LONG).show()
 
-            }
         }
 
     }
