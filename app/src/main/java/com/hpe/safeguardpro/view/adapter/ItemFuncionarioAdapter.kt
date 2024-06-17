@@ -8,11 +8,11 @@ import com.hpe.safeguardpro.service.model.Epi
 import com.hpe.safeguardpro.service.model.Funcionario
 
 class ItemFuncionarioAdapter(funcionarios: List<Funcionario>?, private val clickListListener: (Funcionario) -> Unit) :
-    RecyclerView.Adapter<ItemFuncionarioAdapter.PessoaViewHolder>() {
+    RecyclerView.Adapter<ItemFuncionarioAdapter.FuncionarioViewHolder>() {
 
     private var itemFuncionarioList: List<Funcionario> = arrayListOf()
 
-    class PessoaViewHolder(private val binding: FragmentListItemFuncionarioBinding) :
+    class FuncionarioViewHolder(private val binding: FragmentListItemFuncionarioBinding) :
         RecyclerView.ViewHolder(binding.root) {
         //carrega as informacoes da pessoa na lista
         fun bind(funcionario: Funcionario, clickListListener: (Funcionario) -> Unit) {
@@ -25,17 +25,17 @@ class ItemFuncionarioAdapter(funcionarios: List<Funcionario>?, private val click
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PessoaViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FuncionarioViewHolder {
         val listItemPessoaBinding =
             FragmentListItemFuncionarioBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return PessoaViewHolder(listItemPessoaBinding)
+        return FuncionarioViewHolder(listItemPessoaBinding)
     }
 
     override fun getItemCount(): Int {
         return itemFuncionarioList.count()
     }
 
-    override fun onBindViewHolder(holder: PessoaViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FuncionarioViewHolder, position: Int) {
         holder.bind(itemFuncionarioList[position], clickListListener)
     }
 

@@ -41,7 +41,6 @@ class TelaRelatorioFuncionario : Fragment() {
             val funcionarioBundle = Bundle()
             funcionarioBundle.putInt("funcionarioId", funcionario.id)
             arguments = funcionarioBundle
-//            findNavController().navigate(R.id.pessoaFragment, arguments)
             findNavController().navigate(R.id.telaDetalhesFuncionario, arguments)
         }
 

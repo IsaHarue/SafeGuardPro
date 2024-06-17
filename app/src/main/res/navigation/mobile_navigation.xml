@@ -15,10 +15,6 @@
         android:label="fragment_tela_inicial_funcionario"
         tools:layout="@layout/fragment_tela_inicial_funcionario" />
     <fragment
-        android:id="@+id/telaCadastro"
-        android:name="com.hpe.safeguardpro.view.TelaCadastro"
-        android:label="TelaCadastro" />
-    <fragment
         android:id="@+id/telaCadastroEpi"
         android:name="com.hpe.safeguardpro.view.TelaCadastroEpi"
         android:label="TelaCadastroEpi" />

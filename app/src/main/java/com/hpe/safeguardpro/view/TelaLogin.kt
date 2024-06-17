@@ -57,9 +57,5 @@ class TelaLogin : Fragment() {
             }
         }
 
-        binding.tvcriarconta.setOnClickListener {
-            findNavController().navigate(R.id.telaCadastro)
-        }
-
     }
 }

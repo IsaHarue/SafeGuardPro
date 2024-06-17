@@ -29,7 +29,7 @@ interface EpiService {
     @GET("get_epi/{epi_id}")
     suspend fun getEpiById(@Path("epi_id") id: Int): Response<List<Epi>>
 
-    @GET("select_epis/{epi_ca}")
+    @GET("get_epi/{epi_ca}")
     suspend fun getEpiByCa(@Part("epi_ca") ca: Int): Response<List<Epi>>
 
     @PUT("update_epi/{epi_id}")
@@ -42,6 +42,6 @@ interface EpiService {
         @Part("Descricao") descricao: RequestBody,
     ): Response<Epi>
 
-    @DELETE("delete_epi{epi_id}")
+    @DELETE("delete_epi/{epi_id}")
     suspend fun deleteEpiById(@Path("epi_id") id: Int): Response<Epi>
 }

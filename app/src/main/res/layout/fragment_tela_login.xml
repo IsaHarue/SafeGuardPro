@@ -83,30 +83,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtsenha" />
 
-        <TextView
-            android:id="@+id/tvfrase"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ainda não tem uma conta ?"
-            android:textColor="@color/white"
-
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnLogar" />
-
-        <TextView
-            android:id="@+id/tvcriarconta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="Criar conta"
-            android:textColor="@color/azul3"
-            android:textStyle="bold"
-
-            app:layout_constraintStart_toEndOf="@id/tvfrase"
-            app:layout_constraintTop_toBottomOf="@id/btnLogar" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

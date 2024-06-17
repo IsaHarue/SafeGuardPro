@@ -39,7 +39,6 @@ class TelaRelatorioEpi : Fragment() {
             val epiBundle = Bundle()
             epiBundle.putInt("epiId", epi.id)
             arguments = epiBundle
-//            findNavController().navigate(R.id.pessoaFragment, arguments)
             findNavController().navigate(R.id.telaDetalhesEpi, arguments)
         }
 
