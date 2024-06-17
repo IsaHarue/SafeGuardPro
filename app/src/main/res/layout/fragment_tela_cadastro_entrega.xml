@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cinza"
-    tools:context=".view.TelaCadastro"
+    tools:context=".view.TelaCadastroEntrega"
     >
 
 
@@ -29,7 +29,7 @@
         android:text="Nome do Funcionario:"
         android:textColor="@color/white"
         android:textSize="17sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="@+id/tvcadastro"
         app:layout_constraintTop_toBottomOf="@+id/tvcadastro" />
 
@@ -37,7 +37,9 @@
         android:id="@+id/edtnome"
         android:layout_width="255dp"
         android:layout_height="45dp"
+        android:layout_marginTop="9dp"
         android:background="@color/cinzaC"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/tvnome"
         app:layout_constraintTop_toBottomOf="@+id/tvnome" />
 
@@ -45,7 +47,9 @@
         android:id="@+id/edtepi"
         android:layout_width="255dp"
         android:layout_height="45dp"
+        android:layout_marginTop="9dp"
         android:background="@color/cinzaC"
+        android:textColor="@color/white"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@+id/tvepi"
@@ -57,7 +61,7 @@
         android:id="@+id/tvepi"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="20dp"
         android:text="Nome do EPI:"
         android:textColor="@color/white"
         android:textSize="17sp"
@@ -68,7 +72,9 @@
         android:id="@+id/edtEntrega"
         android:layout_width="255dp"
         android:layout_height="46dp"
+        android:layout_marginTop="9dp"
         android:background="@color/cinzaC"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +84,7 @@
         android:id="@+id/tvEntrega"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="20dp"
         android:text="Entrega:"
         android:textColor="@color/white"
         android:textSize="17sp"
@@ -91,6 +97,7 @@
         android:layout_height="46dp"
         android:layout_marginTop="9dp"
         android:background="@color/cinzaC"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvValidade" />
@@ -99,7 +106,7 @@
         android:id="@+id/tvValidade"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="20dp"
         android:text="Data de Validade:"
         android:textColor="@color/white"
         android:textSize="17sp"
@@ -112,33 +119,34 @@
         android:layout_height="46dp"
         android:layout_marginTop="9dp"
         android:background="@color/cinzaC"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvValidade" />
+        app:layout_constraintTop_toBottomOf="@+id/tvdataCA" />
 
     <TextView
         android:id="@+id/tvdataCA"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
-        android:layout_marginTop="37dp"
-        android:text="Data de Validade:"
+        android:layout_marginTop="20dp"
+        android:text="Data da CA:"
         android:textColor="@color/white"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="@id/edtdataCA"
-        app:layout_constraintTop_toBottomOf="@+id/edtEntrega" />
+        app:layout_constraintTop_toBottomOf="@+id/edtValidade" />
 
 
     <Button
         android:id="@+id/btn_emprestimo"
         android:layout_width="255dp"
         android:layout_height="48dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/azul2"
         android:text="Finalizar"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtValidade" />
+        app:layout_constraintTop_toBottomOf="@+id/edtdataCA" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

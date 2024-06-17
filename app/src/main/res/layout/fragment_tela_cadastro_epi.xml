@@ -8,9 +8,6 @@
     tools:context=".view.TelaCadastro"
     >
 
-
-
-
     <TextView
         android:id="@+id/tvcadastro"
         android:layout_width="wrap_content"
@@ -29,6 +26,7 @@
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/tvnome"
         app:layout_constraintTop_toBottomOf="@+id/tvnome" />
 
@@ -48,6 +46,7 @@
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/tvDataF"
         app:layout_constraintTop_toBottomOf="@+id/tvDataF" />
 
@@ -68,6 +67,7 @@
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:background="@color/cinzaC"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/tvvalidade"
         app:layout_constraintTop_toBottomOf="@+id/tvvalidade" />
 
@@ -87,6 +87,7 @@
         android:layout_width="255dp"
         android:layout_height="100dp"
         android:background="@color/cinzaC"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/tvdescricao"
         app:layout_constraintTop_toBottomOf="@+id/tvdescricao" />
 
