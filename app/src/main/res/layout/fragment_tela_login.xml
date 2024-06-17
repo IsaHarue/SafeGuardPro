@@ -83,6 +83,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtsenha" />
 
+        <CheckBox
+            android:id="@+id/cb_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/btnLogar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtsenha" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

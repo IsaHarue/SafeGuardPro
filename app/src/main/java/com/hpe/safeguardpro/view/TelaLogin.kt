@@ -31,10 +31,12 @@ class TelaLogin : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         var senha = ""
         var cpf = ""
+        var admin = ""
 
         binding.btnLogar.setOnClickListener {
             cpf = binding.edtcpf.editableText.toString()
             senha = binding.edtsenha.editableText.toString()
+            admin = binding.cbAdmin.isChecked.toString()
 
             if ((cpf.isBlank() || cpf.isEmpty()) || (senha.isBlank() || senha.isEmpty())) {
                 Toast.makeText(requireContext(), "Preencha os campos", Toast.LENGTH_LONG).show()
