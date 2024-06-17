@@ -44,7 +44,7 @@
                 android:id="@+id/tvtempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="tempo: 543 dias"
+                android:text="tempo: 366 dias"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 android:textStyle="bold"
