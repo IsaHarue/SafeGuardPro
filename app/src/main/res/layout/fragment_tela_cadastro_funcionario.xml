@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cinza"
-    tools:context=".view.TelaCadastro"
     >
 
 
@@ -117,19 +116,30 @@
         app:layout_constraintTop_toBottomOf="@id/edtData"
         />
 
+    <CheckBox
+        android:id="@+id/cb_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:text="Admin"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtCpf" />
+
     <Button
         android:id="@+id/btn_cadastrar_funcionario"
         android:layout_width="255dp"
         android:layout_height="48dp"
+        android:layout_margin="25dp"
         android:backgroundTint="@color/azul2"
         android:text="Cadastrar"
         android:textColor="@color/white"
-        android:layout_margin="25dp"
         android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtCpf"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/cb_admin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.hpe.safeguardpro.databinding.FragmentTelaCadastroFuncionarioBinding
 import com.hpe.safeguardpro.service.model.Funcionario
+import com.hpe.safeguardpro.service.model.Login
 import com.hpe.safeguardpro.viewmodel.FuncionarioViewModel
 
 
@@ -40,13 +41,16 @@ class TelaCadastroFuncionario : Fragment() {
             val email = binding.edtemail.editableText.toString()
             val cpf = binding.edtCpf.editableText.toString()
             val dataNasc = binding.edtData.editableText.toString()
+            val admin = binding.cbAdmin.isChecked
+
 
             if (nome != "" && email != "" && cpf != "" && dataNasc != "") {
                 val funcionario = Funcionario(
                     nome = nome,
                     email = email,
                     cpf = cpf,
-                    dataNasc = dataNasc
+                    dataNasc = dataNasc,
+                    admin = admin
                 )
 
                 viewModel.createdfuncionario.value?.let {
